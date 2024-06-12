@@ -9,4 +9,4 @@ beforeSubmit = () => {
     outputDate.value = formattedDate;
 }
 
-beforeSubmit();
+beforeSubmit(); 
