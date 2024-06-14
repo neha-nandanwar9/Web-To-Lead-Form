@@ -7,7 +7,8 @@ beforeSubmit = (event) => {
     let inputDate = document.querySelector('.inputDate')
     let outputDate = document.querySelector('.outputDate')
     console.log('Input Value: ', inputDate.value);
-    let formattedDate = new Date(inputDate.value).toLocaleDateString("en-IN")
+    let formattedDate = new Date(inputDate.value).toLocaleDateString("en-IN") 
+    //system.debug(userInfo.getLocale());
     outputDate.value = formattedDate;
     }else{
         alert("Please check the reCaptcha Box to Submit");
