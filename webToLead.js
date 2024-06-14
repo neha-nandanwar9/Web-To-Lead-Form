@@ -1,12 +1,18 @@
 console.log('Web to Lead')
 
+let captchaChecked = false;
 let inputDate = document.querySelector('.inputDate')
 let outputDate = document.querySelector('.outputDate')
 
-beforeSubmit = () => {
+beforeSubmit = (event) => {
+    if(captchaChecked){
     console.log('Input Value: ', inputDate.value);
     let formattedDate = new Date(inputDate.value).toLocaleDateString("en-IN")
     outputDate.value = formattedDate;
+    }else{
+        alert('Please check the reCaptcha Box to Submit')
+        event.preventDefault(); //stop the submission of the form
+    }
 }
 
 beforeSubmit(); 
@@ -20,3 +26,6 @@ function timestamp() {
         }
      } setInterval(timestamp, 500); 
 
+function captchaSuccess(){
+    captchaChecked = true;
+}
