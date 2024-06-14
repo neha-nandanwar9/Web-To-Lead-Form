@@ -12,9 +12,11 @@
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DIR000001IQTp" method="POST"
     onsubmit={beforeSumbit}>
     
+    <input type=hidden name='captcha_settings' value='{"keyname":"WebToLeadForm","fallback":"true","orgId":"00DIR000001IQTp","ts":""}'>
     <input type=hidden name="oid" value="00DIR000001IQTp">
     <input type=hidden name="retURL" value="https://neha-nandanwar9.github.io/Web-To-Lead-Form/thanks.html">
     <input type=hidden name="Lead_Date__c" class="outputDate"/>
+    
     
     <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true"/><br>
     
@@ -28,9 +30,12 @@
 
     <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text"  required="true"/><br>
     
+    <div class="g-recaptcha" data-sitekey="6LeeevgpAAAAADfuSBxiqDclZrWJVANcLl32eqzU"></div><br>
+
     <input id="submit" type="submit" name="submit">
     
     </form>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="./webToLead.js"></script>
 </body>
 </html>
