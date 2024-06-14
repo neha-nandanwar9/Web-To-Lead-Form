@@ -10,7 +10,7 @@ beforeSubmit = (event) => {
     let formattedDate = new Date(inputDate.value).toLocaleDateString("en-IN")
     outputDate.value = formattedDate;
     }else{
-        alert("Please check the reCaptcha Box to Submit")
+        alert("Please check the reCaptcha Box to Submit");
         event.preventDefault(); //stop the submission of the form
     }
 }

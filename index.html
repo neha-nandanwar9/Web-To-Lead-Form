@@ -31,11 +31,11 @@
     <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text"  required="true"/><br>
     
     <div 
-        class="g-recaptcha" data-callback="captchaSuccess(event)"
+        class="g-recaptcha" 
         data-sitekey="6LeeevgpAAAAADfuSBxiqDclZrWJVANcLl32eqzU">
     </div>
     <br>
-    <input id="submit" type="submit" name="submit">
+    <input id="submit" data-callback="captchaSuccess(event)" type="submit" name="submit">
     
     </form>
     <script src="./webToLead.js"></script>
